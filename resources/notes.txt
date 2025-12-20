@@ -1,0 +1,23 @@
+
+1- i want to check each prop used kafka
+in config-sever         spring.json.type.mapping: paymentConfirmation:com.MicroserviceEC.ecomerce.Payment.payment.kafka_Notification.PaymentNotificationRequest
+
+instead write this i created config file for payment service
+
+
+so i want do same for notification
+
+creat config file instead of using         spring.json.type.mapping: paymentConfirmation:com.MicroserviceEC.ecomerce.Payment.payment.kafka_Notification.PaymentNotificationRequest,orderConfirmation:com.MicroserviceEC.ecomerce.order.kafka.orderConfirmation
+
+
+
+2- create email template front end ;
+
+
+3- api getway
+
+dependencies
+  -Eureka client
+  -GetWay
+  -config client
+  -oauth2 resource server

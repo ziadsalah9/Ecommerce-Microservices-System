@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Discovery" />
+        <module name="config-server" />
+      </profile>
+      <profile name="Annotation profile for Payment" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="Order" />
+        <module name="Product" />
+        <module name="Payment" />
+        <module name="ApiGetway" />
+        <module name="Customer" />
+        <module name="Notification" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGetway" options="-parameters" />
+      <module name="Customer" options="-parameters" />
+      <module name="Discovery" options="-parameters" />
+      <module name="Notification" options="-parameters" />
+      <module name="Order" options="-parameters" />
+      <module name="Payment" options="-parameters" />
+      <module name="Product" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+    </option>
+  </component>
+</project>
