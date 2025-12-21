@@ -5,8 +5,7 @@ import com.MicroserviceEC.ecomerce.Notification.Kafka.payment.PaymentMethod;
 import java.math.BigDecimal;
 import java.util.List;
 
-public record OrderConfirmation (
-
+public record orderConfirmation (
 
         String orderRefrence,
         BigDecimal totalAmount,
@@ -14,5 +13,6 @@ public record OrderConfirmation (
         Customer customer,
         List<Product> products
 
-) {
+
+){
 }

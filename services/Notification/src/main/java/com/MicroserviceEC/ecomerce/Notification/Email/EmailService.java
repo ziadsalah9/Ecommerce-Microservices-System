@@ -30,7 +30,7 @@ public class EmailService {
     private final JavaMailSender mailSender;
     private final SpringTemplateEngine templateEngine;
 
-    @Async
+  //  @Async
     public void sendPaymentSuccessEmail(
             String destinationEmail,
             String customerName,
@@ -40,7 +40,7 @@ public class EmailService {
 
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, UTF_8.name());
-        messageHelper.setFrom("contact@aliboucoding.com");
+        messageHelper.setFrom("ziads5933@gmail.com");
 
         final String templateName = PAYMENT_CONFIRMATION.getTemplate();
 
@@ -74,7 +74,7 @@ public class EmailService {
     // order
 
 
-    @Async
+    //@Async
     public void sendOrderConfirmationEmail(
             String destinationEmail,
             String customerName,
@@ -85,7 +85,7 @@ public class EmailService {
 
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, UTF_8.name());
-        messageHelper.setFrom("contact@aliboucoding.com");
+        messageHelper.setFrom("ziads5933@gmail.com");
 
         final String templateName = ORDER_CONFIRMATION.getTemplate();
 

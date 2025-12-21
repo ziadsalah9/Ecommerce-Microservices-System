@@ -1,5 +1,7 @@
 package com.MicroserviceEC.ecomerce.Payment.payment.kafka_Notification;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -13,16 +15,28 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class NoticficationProducer {
 
-    private final KafkaTemplate<String, PaymentNotificationRequest> kafkaTemplate;
+    private final KafkaTemplate<String, byte[]> kafkaTemplate;
+    private final ObjectMapper objectMapper;
 
-    public void sendPaymentNotification(PaymentNotificationRequest paymentNotificationRequest) {
+    public void sendPaymentNotification(PaymentNotificationRequest paymentNotificationRequest)  {
 
-        log.info("Sending Payment Notification Request to topic: " + paymentNotificationRequest);
-        Message<PaymentNotificationRequest> message = MessageBuilder.withPayload(paymentNotificationRequest)
-                .setHeader(KafkaHeaders.TOPIC,"payment-topic")
-                .build();
+  try {
 
-        kafkaTemplate.send(message);
+
+      byte[] payload = objectMapper.writeValueAsBytes(paymentNotificationRequest);
+
+      log.info("Sending Payment Notification Request to topic: " + paymentNotificationRequest);
+      Message<byte[]> message = MessageBuilder.withPayload(payload)
+              .setHeader(KafkaHeaders.TOPIC, "payment-topic")
+              .build();
+
+      kafkaTemplate.send(message);
+
+      log.info("payment notification sent");
+  }
+  catch (Exception e) {
+      log.error("payment notification failed", e);
+  }
     }
 
 }

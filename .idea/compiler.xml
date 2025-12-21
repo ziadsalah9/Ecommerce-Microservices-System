@@ -9,7 +9,7 @@
         <module name="Discovery" />
         <module name="config-server" />
       </profile>
-      <profile name="Annotation profile for Payment" enabled="true">
+      <profile name="Annotation profile for Notification" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

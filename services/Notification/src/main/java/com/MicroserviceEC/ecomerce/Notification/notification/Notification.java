@@ -1,7 +1,5 @@
 package com.MicroserviceEC.ecomerce.Notification.notification;
 
-import com.MicroserviceEC.ecomerce.Notification.Kafka.order.OrderConfirmation;
-import com.MicroserviceEC.ecomerce.Notification.Kafka.payment.PaymentConfirmation;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
