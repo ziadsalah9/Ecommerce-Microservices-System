@@ -201,7 +201,7 @@ public class NotificationConsumer {
                 "ziads5933@gmail.com",
                 "Ziad Salah",
                 BigDecimal.valueOf(100),
-                "ORDER123",
+                "1073741822",
                 List.of(new Product(10, "email","", BigDecimal.valueOf(50) ,20))
         );
 
@@ -213,7 +213,7 @@ public class NotificationConsumer {
                 "ziads5933@gmail.com",
                 "Ziad Salah",
                 BigDecimal.valueOf(100),
-                "ORDER123"
+                "1073741822"
         );
 
     }

@@ -1,0 +1,166 @@
+{
+  "v": 11,
+  "name": "Microservice ecommerce",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "endpoint": "http://localhost:9098/realms/micro-service/protocol/openid-connect/token",
+      "name": "Get Bearer Tokens",
+      "params": [],
+      "headers": [],
+      "method": "POST",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "preRequestScript": "",
+      "testScript": "",
+      "body": {
+        "contentType": "application/x-www-form-urlencoded",
+        "body": "grant_type: client_credentials\nclient_id: micro-service-api\nclient_secret: 9E6QU8qNO13s9kScgpWRmemnLUal4US8"
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": null
+    },
+    {
+      "v": "17",
+      "endpoint": "http://localhost:8222/api/v1/products",
+      "name": "Get Products",
+      "params": [],
+      "headers": [],
+      "method": "GET",
+      "auth": {
+        "authType": "bearer",
+        "authActive": true,
+        "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJELVVMWktkMjgtc21VVlNSWGFqZjZ0MklkZzFaUEVjZWpuWXppZGUySEtBIn0.eyJleHAiOjE3NjY2ODM1ODcsImlhdCI6MTc2NjY4MzI4NywianRpIjoiY2NmNTBjMzEtM2MxYy00ZWY2LTllMjMtNTQyMDA2NGM4ZjQzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDk4L3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImZmMTYyYjYxLTY3NzUtNDFlNy1iYTc4LTllMjE1MWI1NDVlNCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UtYXBpIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3JvLXNlcnZpY2UiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1pY3JvLXNlcnZpY2UtYXBpIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJjbGllbnRIb3N0IjoiMTcyLjE4LjAuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW1pY3JvLXNlcnZpY2UtYXBpIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xOC4wLjEiLCJjbGllbnRfaWQiOiJtaWNyby1zZXJ2aWNlLWFwaSJ9.ARCCp_dUM7erngUoHc1Tctxl4gyU4-TDVndtchY09WX6Tdw9IfX7pYENbhQZ8YW8SGOtfndXY6lCftWmeJiGP2VgIVPScdxxPqo89Xr9fmz5c7RYSNj3t4T0sqIJqleoHmQ0Lmo3R8UXUNo1EHTX-WPP72gN0mMsx4f7VkVJJxynE8GtQi3tn6pa-F_-wuNg8cR8_V75yYHdqrRPUm31JmfwaECoqWWsE29PCh3PE2KhdaURi6P_nEQnvM-Bkau-b_qqM_QBTitFM9lF42h0Jy-XN3TA4CfjOL5MudRVDp4Uzl0KocL0SEd7atm_j1-2jJH7h839KxaBpujPAZ1jcg"
+      },
+      "preRequestScript": "",
+      "testScript": "",
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": null
+    },
+    {
+      "v": "17",
+      "endpoint": "http://localhost:8222/api/v1/products",
+      "name": "Add Product",
+      "params": [],
+      "headers": [],
+      "method": "POST",
+      "auth": {
+        "authType": "bearer",
+        "authActive": true,
+        "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJELVVMWktkMjgtc21VVlNSWGFqZjZ0MklkZzFaUEVjZWpuWXppZGUySEtBIn0.eyJleHAiOjE3NjY2ODM1ODcsImlhdCI6MTc2NjY4MzI4NywianRpIjoiY2NmNTBjMzEtM2MxYy00ZWY2LTllMjMtNTQyMDA2NGM4ZjQzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDk4L3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImZmMTYyYjYxLTY3NzUtNDFlNy1iYTc4LTllMjE1MWI1NDVlNCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UtYXBpIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3JvLXNlcnZpY2UiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1pY3JvLXNlcnZpY2UtYXBpIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJjbGllbnRIb3N0IjoiMTcyLjE4LjAuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW1pY3JvLXNlcnZpY2UtYXBpIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xOC4wLjEiLCJjbGllbnRfaWQiOiJtaWNyby1zZXJ2aWNlLWFwaSJ9.ARCCp_dUM7erngUoHc1Tctxl4gyU4-TDVndtchY09WX6Tdw9IfX7pYENbhQZ8YW8SGOtfndXY6lCftWmeJiGP2VgIVPScdxxPqo89Xr9fmz5c7RYSNj3t4T0sqIJqleoHmQ0Lmo3R8UXUNo1EHTX-WPP72gN0mMsx4f7VkVJJxynE8GtQi3tn6pa-F_-wuNg8cR8_V75yYHdqrRPUm31JmfwaECoqWWsE29PCh3PE2KhdaURi6P_nEQnvM-Bkau-b_qqM_QBTitFM9lF42h0Jy-XN3TA4CfjOL5MudRVDp4Uzl0KocL0SEd7atm_j1-2jJH7h839KxaBpujPAZ1jcg"
+      },
+      "preRequestScript": "",
+      "testScript": "",
+      "body": {
+        "contentType": "application/json",
+        "body": "{\n  \"Id\": 50500,\n  \"Name\": \"labtops\",\n  \"Description\": \"laptops\",\n  \"availableQuantity\": 40,\n  \"Price\": 3400,\n  \"category_id\": 101\n}"
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": null
+    },
+    {
+      "v": "17",
+      "endpoint": "http://localhost:8222/api/v1/customers",
+      "name": "Add Customer",
+      "params": [],
+      "headers": [],
+      "method": "POST",
+      "auth": {
+        "authType": "bearer",
+        "authActive": true,
+        "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJELVVMWktkMjgtc21VVlNSWGFqZjZ0MklkZzFaUEVjZWpuWXppZGUySEtBIn0.eyJleHAiOjE3NjY2ODQxOTgsImlhdCI6MTc2NjY4Mzg5OCwianRpIjoiYmJkNzg3OWQtZjlkNS00ZGQwLWFhZjQtNDM1NjVhZjJkMGVlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDk4L3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImZmMTYyYjYxLTY3NzUtNDFlNy1iYTc4LTllMjE1MWI1NDVlNCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UtYXBpIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3JvLXNlcnZpY2UiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1pY3JvLXNlcnZpY2UtYXBpIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJjbGllbnRIb3N0IjoiMTcyLjE4LjAuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW1pY3JvLXNlcnZpY2UtYXBpIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xOC4wLjEiLCJjbGllbnRfaWQiOiJtaWNyby1zZXJ2aWNlLWFwaSJ9.lZHV7Joid0OxYnPXueZKxx-BlSykjgBGBhRgsKnfSN3SDhCm0TSz8DapMEan0Ya_Op0mY0EHF3T9KfvIerxF-rCX-A9HqS16dqHy4WuGhGBjLV9tMnygRMDeiqYkJMdlU8jnqgvUWVj38RQiWKWxRzD3jafpOI3Ck4BmCPd_wUK-XgrFOtfEsNv2J_vz5clhNupgapzKeNsypmPn6LAT8hRUtamxIKqrLlSfLGduBvmCrDerv-oI80oazZRJHgm9QGPbI6xGhbrVy8vPJv4-MWXDvsgR1jlXtXJskbl-nQ4wUwoEqW99fDdjQxJT7TZIE0IurJUOnjHd0mNwQ0l_Tg"
+      },
+      "preRequestScript": "",
+      "testScript": "",
+      "body": {
+        "contentType": "application/json",
+        "body": "{\n  \"id\": \"1234\",\n  \"firstName\": \"ziad\",\n  \"lastName\": \"salah\",\n  \"email\": \"ziads5933@gmail.com\",\n  \"address\": {\n    \"houseNo\": \"123\",\n    \"street\": \"cairo/eldokey\",\n    \"zipcode\": \"123\"\n  }\n}"
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": null
+    },
+    {
+      "v": "17",
+      "endpoint": "http://localhost:8222/api/v1/customers",
+      "name": "get Customers",
+      "params": [],
+      "headers": [],
+      "method": "GET",
+      "auth": {
+        "authType": "bearer",
+        "authActive": true,
+        "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJELVVMWktkMjgtc21VVlNSWGFqZjZ0MklkZzFaUEVjZWpuWXppZGUySEtBIn0.eyJleHAiOjE3NjY2ODQxOTgsImlhdCI6MTc2NjY4Mzg5OCwianRpIjoiYmJkNzg3OWQtZjlkNS00ZGQwLWFhZjQtNDM1NjVhZjJkMGVlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDk4L3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImZmMTYyYjYxLTY3NzUtNDFlNy1iYTc4LTllMjE1MWI1NDVlNCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UtYXBpIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3JvLXNlcnZpY2UiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1pY3JvLXNlcnZpY2UtYXBpIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJjbGllbnRIb3N0IjoiMTcyLjE4LjAuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW1pY3JvLXNlcnZpY2UtYXBpIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xOC4wLjEiLCJjbGllbnRfaWQiOiJtaWNyby1zZXJ2aWNlLWFwaSJ9.lZHV7Joid0OxYnPXueZKxx-BlSykjgBGBhRgsKnfSN3SDhCm0TSz8DapMEan0Ya_Op0mY0EHF3T9KfvIerxF-rCX-A9HqS16dqHy4WuGhGBjLV9tMnygRMDeiqYkJMdlU8jnqgvUWVj38RQiWKWxRzD3jafpOI3Ck4BmCPd_wUK-XgrFOtfEsNv2J_vz5clhNupgapzKeNsypmPn6LAT8hRUtamxIKqrLlSfLGduBvmCrDerv-oI80oazZRJHgm9QGPbI6xGhbrVy8vPJv4-MWXDvsgR1jlXtXJskbl-nQ4wUwoEqW99fDdjQxJT7TZIE0IurJUOnjHd0mNwQ0l_Tg"
+      },
+      "preRequestScript": "",
+      "testScript": "",
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": null
+    },
+    {
+      "v": "17",
+      "endpoint": "http://localhost:8222/api/v1/orders",
+      "name": "get orders",
+      "params": [],
+      "headers": [],
+      "method": "GET",
+      "auth": {
+        "authType": "bearer",
+        "authActive": true,
+        "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJELVVMWktkMjgtc21VVlNSWGFqZjZ0MklkZzFaUEVjZWpuWXppZGUySEtBIn0.eyJleHAiOjE3NjY2ODQxOTgsImlhdCI6MTc2NjY4Mzg5OCwianRpIjoiYmJkNzg3OWQtZjlkNS00ZGQwLWFhZjQtNDM1NjVhZjJkMGVlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDk4L3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImZmMTYyYjYxLTY3NzUtNDFlNy1iYTc4LTllMjE1MWI1NDVlNCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UtYXBpIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3JvLXNlcnZpY2UiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1pY3JvLXNlcnZpY2UtYXBpIjp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJjbGllbnRIb3N0IjoiMTcyLjE4LjAuMSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW1pY3JvLXNlcnZpY2UtYXBpIiwiY2xpZW50QWRkcmVzcyI6IjE3Mi4xOC4wLjEiLCJjbGllbnRfaWQiOiJtaWNyby1zZXJ2aWNlLWFwaSJ9.lZHV7Joid0OxYnPXueZKxx-BlSykjgBGBhRgsKnfSN3SDhCm0TSz8DapMEan0Ya_Op0mY0EHF3T9KfvIerxF-rCX-A9HqS16dqHy4WuGhGBjLV9tMnygRMDeiqYkJMdlU8jnqgvUWVj38RQiWKWxRzD3jafpOI3Ck4BmCPd_wUK-XgrFOtfEsNv2J_vz5clhNupgapzKeNsypmPn6LAT8hRUtamxIKqrLlSfLGduBvmCrDerv-oI80oazZRJHgm9QGPbI6xGhbrVy8vPJv4-MWXDvsgR1jlXtXJskbl-nQ4wUwoEqW99fDdjQxJT7TZIE0IurJUOnjHd0mNwQ0l_Tg"
+      },
+      "preRequestScript": "",
+      "testScript": "",
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": null
+    },
+    {
+      "v": "17",
+      "endpoint": "https://echo.hoppscotch.io",
+      "name": "add orders",
+      "params": [],
+      "headers": [],
+      "method": "GET",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "preRequestScript": "",
+      "testScript": "",
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": null
+    }
+  ],
+  "headers": [],
+  "auth": {
+    "authType": "none",
+    "authActive": true
+  },
+  "variables": [],
+  "description": ""
+}
