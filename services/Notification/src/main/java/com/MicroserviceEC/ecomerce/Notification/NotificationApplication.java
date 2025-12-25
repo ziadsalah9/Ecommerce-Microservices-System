@@ -23,5 +23,6 @@ public class NotificationApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         notificationConsumer.sendemail();
+        notificationConsumer.sendemailPayment();
     }
 }

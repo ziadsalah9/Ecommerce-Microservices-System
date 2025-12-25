@@ -155,6 +155,9 @@ public class NotificationConsumer {
     private final EmailService emailService;
     private final ObjectMapper objectMapper;
 
+
+
+
     @KafkaListener(topics = "order-topic")
     public void consumeOrderConfirmationNotifications(byte[] messageBytes) {
         try {
@@ -190,6 +193,9 @@ public class NotificationConsumer {
     }
 
 
+
+
+
        public  void  sendemail() throws MessagingException {
         emailService.sendOrderConfirmationEmail(
                 "ziads5933@gmail.com",
@@ -198,7 +204,22 @@ public class NotificationConsumer {
                 "ORDER123",
                 List.of(new Product(10, "email","", BigDecimal.valueOf(50) ,20))
         );
+
+
     }
+
+    public  void  sendemailPayment() throws MessagingException {
+        emailService.sendPaymentSuccessEmail(
+                "ziads5933@gmail.com",
+                "Ziad Salah",
+                BigDecimal.valueOf(100),
+                "ORDER123"
+        );
+
+    }
+
+
+
 
     @KafkaListener(topics = "payment-topic")
     public void consumePaymentSuccessNotifications(byte[] messageBytes) {
@@ -231,6 +252,7 @@ public class NotificationConsumer {
             log.error("Error while consuming payment-topic message", e);
         }
     }
+
 }
 
 @Configuration
